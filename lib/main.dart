@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:task_1/pages/coursepage.dart';
+import 'package:task_1/pages/homepage.dart';
 import 'package:task_1/pages/loginpage.dart';
 import 'package:task_1/pages/profilepage.dart';
 
@@ -12,7 +15,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.

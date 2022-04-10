@@ -1,62 +1,7 @@
-// import 'package:flutter/material.dart';
-
-// class Login extends StatefulWidget {
-//   const Login({Key? key}) : super(key: key);
-
-//   @override
-//   State<Login> createState() => _LoginState();
-// }
-
-// class _LoginState extends State<Login> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//         backgroundColor: Color.fromARGB(255, 221, 199, 224),
-//         body: Center(
-//           child: Align(
-//               alignment: Alignment.center,
-//               child: Expanded(
-//                 child: Padding(
-//                   padding: const EdgeInsets.all(8.0),
-//                   child: Container(
-//                     decoration: BoxDecoration(
-//                         boxShadow: [
-//                           BoxShadow(
-//                             // offset: Offset(4, 8),
-//                             color: Color.fromARGB(255, 159, 137, 161),
-//                             blurRadius: 8,
-//                             // Shadow position
-//                           ),
-//                         ],
-//                         color: Color.fromARGB(255, 248, 248, 246),
-//                         borderRadius: BorderRadius.all(Radius.circular(20))),
-//                     margin: EdgeInsets.all(30),
-//                     //color: Colors.amber,
-//                     child: Column(
-//                       children: [
-//                         TextFormField(
-//                           decoration: const InputDecoration(
-//                             border: UnderlineInputBorder(),
-//                             labelText: 'username',
-//                           ),
-//                         ),
-//                         TextFormField(
-//                           decoration: const InputDecoration(
-//                             border: UnderlineInputBorder(),
-//                             labelText: 'password',
-//                           ),
-//                         ),
-//                       ],
-//                     ),
-//                   ),
-//                 ),
-//               )),
-//         ));
-//   }
-// }
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
+import 'package:task_1/pages/homepage.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key? key}) : super(key: key);
@@ -174,7 +119,9 @@ class _LoginPageState extends State<LoginPage> {
                             width: double.infinity,
                             child: ElevatedButton(
                               style: roundedBtn,
-                              onPressed: () {},
+                              onPressed: () {
+                                Get.to(Homepage());
+                              },
                               child: Text("LOGIN"),
                             ),
                           ),
