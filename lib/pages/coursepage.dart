@@ -14,7 +14,9 @@ class _CoursePageState extends State<CoursePage> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
+        backgroundColor: Color.fromARGB(255, 3, 21, 34),
         appBar: AppBar(
+          backgroundColor: Color.fromARGB(255, 26, 82, 112),
           title: Text("Flutter develpoment"),
           bottom: TabBar(
             tabs: [
@@ -35,6 +37,9 @@ class _CoursePageState extends State<CoursePage> {
             child: Container(
               child: Column(
                 children: [
+                  SizedBox(
+                    height: 10,
+                  ),
                   CusContainer(
                       t1: "Installation",
                       t2: "10:30 Minutes",

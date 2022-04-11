@@ -18,9 +18,11 @@ class _ImageSliderState extends State<ImageSlider> {
   final imgs = [
     'https://images.pexels.com/photos/2899097/pexels-photo-2899097.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
     'https://images.pexels.com/photos/2820884/pexels-photo-2820884.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    'https://images.pexels.com/photos/2899097/pexels-photo-2899097.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
   ];
   Widget buildimg(String name, int index) {
     return Container(
+        //width: 350,
         margin: EdgeInsets.all(2.5),
         child: CachedNetworkImage(
           imageUrl: name,
@@ -32,7 +34,7 @@ class _ImageSliderState extends State<ImageSlider> {
     return AnimatedSmoothIndicator(
         effect: JumpingDotEffect(
           dotHeight: 20,
-          dotColor: Colors.black12,
+          dotColor: Colors.white,
           activeDotColor: Colors.blue,
           dotWidth: 20,
         ),
@@ -51,7 +53,7 @@ class _ImageSliderState extends State<ImageSlider> {
             },
             options: CarouselOptions(
                 height: 200,
-                aspectRatio: 16 / 9,
+                //aspectRatio: 16 / 9,
                 autoPlay: true,
                 //enlargeCenterPage: true,
                 viewportFraction: .55,
@@ -84,6 +86,7 @@ class CusContainer extends StatelessWidget {
       height: 120,
       padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
+        color: Color.fromARGB(255, 26, 82, 112),
         boxShadow: [
           BoxShadow(
             //spreadRadius: 5,
@@ -91,10 +94,9 @@ class CusContainer extends StatelessWidget {
             // offset: Offset(0, 2),
           ),
         ],
-        color: Colors.white,
         borderRadius: BorderRadius.circular(30),
         border: Border.all(
-          color: Colors.white,
+          color: Color.fromARGB(255, 26, 82, 112),
         ),
       ),
       child: Row(
@@ -118,14 +120,20 @@ class CusContainer extends StatelessWidget {
                 children: [
                   Text(
                     t1,
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                        color: Colors.white),
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   Text(
                     t2,
-                    style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
+                    style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15,
+                        color: Colors.white),
                   ),
                 ],
               ),
@@ -203,10 +211,10 @@ class PracticeTab extends StatelessWidget {
               // offset: Offset(0, 2),
             ),
           ],
-          color: Colors.white,
+          color: Color.fromARGB(255, 6, 51, 75),
           borderRadius: BorderRadius.circular(30),
           border: Border.all(
-            color: Colors.white,
+            color: Color.fromARGB(255, 6, 51, 75),
           ),
         ),
         padding: EdgeInsets.all(15),
@@ -218,7 +226,10 @@ class PracticeTab extends StatelessWidget {
               children: [
                 Text(
                   "Login Page UI",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 23),
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 23,
+                      color: Colors.white),
                 ),
                 Expanded(child: SizedBox()),
                 ElevatedButton(
@@ -235,7 +246,10 @@ class PracticeTab extends StatelessWidget {
             ),
             Row(
               children: [
-                SizedBox(
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(80),
+                  ),
                   width: 80,
                   height: 100,
                   child: CachedNetworkImage(
@@ -247,7 +261,10 @@ class PracticeTab extends StatelessWidget {
                 SizedBox(
                   width: 10,
                 ),
-                SizedBox(
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
                   width: 80,
                   height: 100,
                   child: CachedNetworkImage(
@@ -261,7 +278,9 @@ class PracticeTab extends StatelessWidget {
             Text(
               "Estimated time 1 Day",
               style: TextStyle(
-                  fontWeight: FontWeight.w500, fontSize: 20, color: Colors.red),
+                  fontWeight: FontWeight.w500,
+                  fontSize: 20,
+                  color: Colors.white),
             )
           ],
         ),

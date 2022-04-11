@@ -14,22 +14,44 @@ class _HomepageState extends State<Homepage> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        appBar: AppBar(title: Text("Tutorial ")),
+        backgroundColor: Color.fromARGB(255, 3, 21, 34),
+        appBar: AppBar(
+          actions: [
+            GestureDetector(
+              child: Icon(Icons.more_vert),
+              onTap: () {},
+            ),
+          ],
+          automaticallyImplyLeading: false,
+          title: Text("Tutorial "),
+          backgroundColor: Color.fromARGB(255, 26, 82, 112),
+        ),
         body: Container(
+          color: Color.fromARGB(255, 3, 21, 34),
           // padding: EdgeInsets.all(20),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Container(
                 margin: EdgeInsets.all(10),
                 height: 80,
                 width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(
-                    color: Colors.black,
-                  ),
-                ),
+                // decoration: BoxDecoration(
+                //   //color: Colors.white,
+                //   color: Color.fromARGB(255, 26, 82, 112),
+                //   boxShadow: [
+                //     BoxShadow(
+                //       //spreadRadius: 5,
+                //       blurRadius: 5,
+                //       // offset: Offset(0, 2),
+                //     ),
+                //   ],
+                //   borderRadius: BorderRadius.circular(20),
+                //   border: Border.all(
+                //     color: Color.fromARGB(255, 26, 82, 112),
+                //   ),
+                // ),
                 child: Padding(
                   padding: const EdgeInsets.all(10),
                   child: Column(
@@ -39,34 +61,58 @@ class _HomepageState extends State<Homepage> {
                       Text(
                         "Welcome user",
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 23),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 23,
+                            color: Colors.white),
                       ),
                       Text(
                         "12 courses completed",
                         style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w400),
+                            fontSize: 20,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.white),
                       ),
                     ],
                   ),
                 ),
               ),
               ImageSlider(),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
+                  "Courses",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      color: Colors.white),
+                ),
+              ),
               SizedBox(
                 height: 50,
                 child: AppBar(
-                  backgroundColor: Colors.white,
+                  backgroundColor: Colors.transparent,
+                  elevation: 0,
+                  //backgroundColor: Color.fromARGB(0, 26, 82, 112),
                   bottom: TabBar(
+                    indicator: BoxDecoration(
+                        // color: Color.fromARGB(255, 26, 82, 112),
+                        border:
+                            Border(bottom: BorderSide(color: Colors.white))),
+                    // indicatorColor: Colors.white,
+                    // indicatorSize: TabBarIndicatorSize.tab,
+                    // labelPadding: EdgeInsets.all(0),
+                    // indicatorPadding: EdgeInsets.all(0),
                     tabs: [
                       Tab(
                         icon: Text(
                           "Purchased",
-                          style: TextStyle(color: Colors.blue),
+                          style: TextStyle(fontSize: 20),
                         ),
                       ),
                       Tab(
                         icon: Text(
                           "All",
-                          style: TextStyle(color: Colors.blue),
+                          style: TextStyle(fontSize: 20),
                         ),
                       ),
                     ],
@@ -81,7 +127,7 @@ class _HomepageState extends State<Homepage> {
                     // first tab bar view widget
                     SingleChildScrollView(
                       child: Container(
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 3, 21, 34),
                         child: Column(
                           children: [
                             CusContainer(
@@ -110,6 +156,7 @@ class _HomepageState extends State<Homepage> {
                     // second tab bar viiew widget
                     SingleChildScrollView(
                       child: Container(
+                        color: Color.fromARGB(255, 3, 21, 34),
                         child: Column(
                           children: [
                             CusContainer(
